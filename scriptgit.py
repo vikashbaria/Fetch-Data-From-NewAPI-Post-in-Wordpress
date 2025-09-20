@@ -1,13 +1,3 @@
-"""
-gnews_to_wp.py
-Fetch articles from GNews API and post to WordPress using Application Password.
-Handles multiple API keys with automatic failover if quota is reached.
-
-Requirements:
-- Python 3.8+
-- pip install requests
-"""
-
 import requests
 import time
 import json
