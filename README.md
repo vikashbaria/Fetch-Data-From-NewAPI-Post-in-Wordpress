@@ -20,6 +20,10 @@ A Python script to **fetch articles from [News API]** and automatically publish 
 
 ---
 
+![Pakalertpress Home Page](https://raw.githubusercontent.com/vikashbaria/Fetch-Data-From-NewAPI-Post-in-Wordpress/refs/heads/main/Pakalertpress%20Home%20Page.JPG)
+
+
+
 ## 🛠️ Requirements
 
 - Python **3.8+**  
