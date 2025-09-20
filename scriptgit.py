@@ -13,13 +13,13 @@ NEWS_API_KEYS = [
     "",
 ]
 
-GNEWS_KEYWORDS = [
+NewS_KEYWORDS = [
    
     "general"
    
 ]
-GNEWS_LANG = "en"
-GNEWS_COUNTRY = "us"
+NewS_LANG = "en"
+NewS_COUNTRY = "us"
 PAGE_SIZE = 10
 START_PAGE = 1
 MAX_PAGES = 100
@@ -61,7 +61,7 @@ def save_processed_ids(path, ids_set):
 
 
 def fetch_with_failover(query, page_size, page, lang="en", country="us"):
-    """Fetch data from GNews with automatic key failover."""
+    """Fetch data from News with automatic key failover."""
     global current_key_index
 
     while current_key_index < len(NEWS_API_KEYS):
@@ -204,17 +204,17 @@ def create_wp_post(wp_site, wp_user, wp_app_pass, title, html_content,
 
 
 def main():
-    print("Starting GNews -> WordPress importer with failover API keys")
+    print("Starting News -> WordPress importer with failover API keys")
     processed = load_processed_ids(PROCESSED_FILE)
     new_processed = set()
     total_posted = 0
 
-    for keyword in GNEWS_KEYWORDS:
+    for keyword in NewS_KEYWORDS:
         print(f"\n===== Fetching articles for keyword: {keyword} =====")
         for page in range(START_PAGE, MAX_PAGES + 1):
             print(f"\nFetching page {page} for '{keyword}' ...")
             try:
-                data = fetch_with_failover(keyword, PAGE_SIZE, page, GNEWS_LANG, GNEWS_COUNTRY)
+                data = fetch_with_failover(keyword, PAGE_SIZE, page, NewS_LANG, NewS_COUNTRY)
             except RuntimeError as e:
                 print(e)
                 break
