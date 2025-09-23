@@ -27,7 +27,7 @@ REQUEST_DELAY = 1.0
 
 APILINK = ""
 WP_SITE = "https://pakalertpress.com"
-WP_USER = "wpadministrator"
+WP_USER = ""
 WP_APP_PASSWORD = ""
 WP_POST_STATUS = "publish"
 PROCESSED_FILE = "imported_ids.json"
